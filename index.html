@@ -11,10 +11,19 @@
             background: linear-gradient(to right, #ffdde1, #ee9ca7);
             margin: 0;
             padding: 0;
+        }
+        .navbar {
+            background-color: #d94f70;
+            padding: 10px 20px;
+            color: white;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            height: 100vh;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
         }
         .container {
             background-color: white;
@@ -23,6 +32,7 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             width: 100%;
             max-width: 400px;
+            margin: 50px auto;
         }
         h2 {
             text-align: center;
@@ -49,9 +59,33 @@
         button:hover {
             background-color: #c13e5c;
         }
+        .services {
+            max-width: 600px;
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .services ul {
+            list-style: none;
+            padding: 0;
+        }
+        .services li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <div><strong>Beauty Parlour</strong></div>
+        <div>
+            <a href="/">Book</a>
+            <a href="/services">Services</a>
+        </div>
+    </div>
+
     <div class="container">
         <h2>Book Your Appointment</h2>
         <form action="/book" method="post">
@@ -70,6 +104,17 @@
             </select>
             <button type="submit">Book Appointment</button>
         </form>
+    </div>
+
+    <div class="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>💇‍♀️ Haircut - ₹300</li>
+            <li>💆‍♀️ Facial - ₹500</li>
+            <li>💅 Manicure - ₹400</li>
+            <li>🦶 Pedicure - ₹450</li>
+            <li>👰 Bridal Makeup - ₹2000</li>
+        </ul>
     </div>
 </body>
 </html>
